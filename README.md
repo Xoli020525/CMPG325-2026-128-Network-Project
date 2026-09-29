@@ -22,7 +22,7 @@ is provisioned in advance for a VoIP handset rollout (CR11).
 
 ```
 01-client-requirements/   Requirements analysis, traced to design decisions
-02-network-design/        Physical and logical topology diagrams (coming soon)
+02-network-design/        Physical and logical topology diagrams
 03-ip-addressing/         VLSM addressing plan (per-VLAN subnets, gateways)
 04-packet-tracer/         Packet Tracer project files (physical + logical build)
 ```
@@ -33,8 +33,8 @@ project progresses through Milestone 2.
 ## Project Status
 
 - [x] Milestone 1 (28 Aug 2026) — Client requirements, IP addressing plan, initial Packet Tracer build
-- [ ] Milestone 1 — Topology diagrams (in progress)
-- [ ] Milestone 2 (2 Oct 2026) — Full Packet Tracer build, SSH configuration, testing evidence
+- [ ] Milestone 1 — Topology diagrams (completed)
+- [ ] Milestone 2 (2 Oct 2026) — Full Packet Tracer build, SSH configuration, testing evidence (in progress)
 - [ ] Final submission (16 Oct 2026) — Full portfolio, technical report, video demonstration
 
 ## Academic Integrity
