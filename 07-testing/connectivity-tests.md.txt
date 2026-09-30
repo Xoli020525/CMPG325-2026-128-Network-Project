@@ -1,0 +1,31 @@
+# Connectivity Tests — Milestone 2
+
+## Test Objective
+Verify that inter-VLAN routing works correctly across all departments through the L3 core switch (SW-CORE).
+
+## Test Environment
+- **Source:** PC-ADMIN (VLAN 10) — 172.30.84.2
+- **Default Gateway:** 172.30.84.1 (SW-CORE VLAN 10 SVI)
+
+## Test Procedure
+From PC-ADMIN's Command Prompt, four ICMP packets were sent to each destination using the `ping` command.
+
+## Results
+
+| Destination | IP Address | VLAN | Sent | Received | Lost | Status |
+|-------------|-----------|------|------|----------|------|--------|
+| PC-EDIT | 172.30.84.34 | 20 | 4 | 3 | 1 (25%) | ✅ Success |
+| PC-SALES | 172.30.84.66 | 30 | 4 | 3 | 1 (25%) | ✅ Success |
+| PC-DESIGN | 172.30.84.98 | 40 | 4 | 3 | 1 (25%) | ✅ Success |
+| Server | 172.30.84.146 | 60 | 4 | 3 | 1 (25%) | ✅ Success |
+| Boardroom Laptop | 172.30.84.130 | 50 | 4 | 3 | 1 (25%) | ✅ Success |
+
+## Interpretation
+The first packet of each ping shows `Request timed out` — this is the ARP (Address Resolution Protocol) process resolving the destination MAC address. The subsequent replies confirm successful inter-VLAN routing. This is expected behaviour and does not indicate a fault.
+
+## Evidence
+- `screenshots/connectivity-tests-part1.png`
+- `screenshots/connectivity-tests-part2.png`
+
+## Conclusion
+All departments can successfully communicate with each other through SW-CORE's inter-VLAN routing. The client's requirement for department-level connectivity is verified.

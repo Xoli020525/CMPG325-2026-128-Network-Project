@@ -1,0 +1,33 @@
+# SSH Verification — Milestone 2
+
+## Test Objective
+Verify that SSH version 2 is enabled and functional on all network devices, and that secure remote management from the management VLAN (VLAN 99) is successful.
+
+## Assigned Challenge
+SSH (secure device management plane) — CMPG325-2026-128
+
+## Configuration Applied (R1 + all 6 switches)
+
+| Setting | Value |
+|---------|-------|
+| Domain name | molemane.local |
+| RSA key modulus | 2048 bits |
+| Local admin user | admin (privilege 15) |
+| VTY lines | transport input ssh / login local |
+| SSH version | 2 |
+
+## Devices Configured
+- R1 (Router)
+- SW-CORE (Core switch)
+- SW-ADMIN
+- SW-EDIT
+- SW-SALES
+- SW-DESIGN
+- SW-BOARD
+
+## Management VLAN
+- VLAN 99 — 172.30.84.192/28
+- SW-CORE management IP: 172.30.84.193 (gateway)
+- PC-MANAGEMENT: 172.30.84.194
+
+## Verification Command (on SW-CORE)

@@ -1,0 +1,13 @@
+# Telnet Rejection Test — Milestone 2
+
+## Objective
+Verify that Telnet is disabled and only SSH is permitted for remote management.
+
+## Test
+From PC-MANAGEMENT (172.30.84.194), attempt Telnet to SW-CORE (172.30.84.193):
+
+## Result
+The connection was immediately closed by SW-CORE. No login prompt was presented and access was denied, confirming that `transport input ssh` is enforced on the VTY lines.
+
+## Evidence
+`screenshots/telnet-rejected.png`
