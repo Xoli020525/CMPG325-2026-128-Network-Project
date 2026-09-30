@@ -21,6 +21,57 @@ is provisioned in advance for a VoIP handset rollout (CR11).
 ## Repository Structure
 
 ```
+---
+
+## Milestone 2 Progress (Due 2 October 2026)
+
+### Completed Tasks
+- ✅ Full Packet Tracer build with VLANs, trunks, and SVIs configured
+- ✅ SSH implemented on all 7 devices (R1 + 6 switches)
+- ✅ SSH tested successfully from management PC (VLAN 99)
+- ✅ Telnet access rejected on all devices
+- ✅ Inter-VLAN routing verified (all departments communicate)
+- ✅ Configuration files exported for all devices
+- ✅ Testing evidence documented with screenshots
+
+### Assigned Feature: SSH (Secure Device Management Plane)
+
+**Configuration applied on all devices:**
+- Domain name: `molemane.local`
+- RSA keys: 2048-bit
+- Local admin user: `admin` (privilege 15)
+- SSH version 2 enforced
+- VTY lines restricted to SSH only (`transport input ssh`)
+- Telnet disabled
+
+**Management plane (VLAN 99):**
+- Subnet: 172.30.84.192/28
+- SW-CORE management IP: 172.30.84.193
+- PC-MANAGEMENT: 172.30.84.194
+
+**Devices configured:**
+R1, SW-CORE, SW-ADMIN, SW-EDIT, SW-SALES, SW-DESIGN, SW-BOARD
+
+### Verification
+- Ping tests: all departments can reach each other across VLANs
+- SSH login from PC-MANAGEMENT to SW-CORE successful
+- Telnet connection to SW-CORE rejected (only SSH accepted)
+
+### Repository Structure (Milestone 2 additions)
+- `06-configuration/` — Running configurations for all 7 devices
+- `07-testing/` — Test documentation and screenshots
+
+### Testing Evidence
+- [Connectivity Tests](07-testing/connectivity-tests.md)
+- [SSH Verification](07-testing/ssh-verification.md)
+- [Telnet Rejection](07-testing/telnet-rejection.md)
+
+### Project Status
+| Milestone | Status |
+|-----------|--------|
+| Milestone 1 — Design & IP Plan | ✅ Complete |
+| Milestone 2 — Implementation & SSH | ✅ Complete |
+| Final Submission — Video & Report | ⏳ In progress |
 01-client-requirements/   Requirements analysis, traced to design decisions
 02-network-design/        Physical and logical topology diagrams
 03-ip-addressing/         VLSM addressing plan (per-VLAN subnets, gateways)
