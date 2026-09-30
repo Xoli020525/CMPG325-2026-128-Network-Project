@@ -20,10 +20,15 @@ is provisioned in advance for a VoIP handset rollout (CR11).
 
 ## Repository Structure
 
-```
+## Project Status
+
+- [x] **Milestone 1 (28 Aug 2026)** — Client requirements, IP addressing plan, initial Packet Tracer build
+- [x] **Milestone 2 (2 Oct 2026)** — Full Packet Tracer build, SSH configuration, testing evidence
+- [ ] **Final submission (16 Oct 2026)** — Full portfolio, technical report, video demonstration
+
 ---
 
-## Milestone 2 Progress (Due 2 October 2026)
+## Milestone 2 — Implementation & SSH
 
 ### Completed Tasks
 - ✅ Full Packet Tracer build with VLANs, trunks, and SVIs configured
@@ -57,36 +62,16 @@ R1, SW-CORE, SW-ADMIN, SW-EDIT, SW-SALES, SW-DESIGN, SW-BOARD
 - SSH login from PC-MANAGEMENT to SW-CORE successful
 - Telnet connection to SW-CORE rejected (only SSH accepted)
 
-### Repository Structure (Milestone 2 additions)
-- `06-configuration/` — Running configurations for all 7 devices
-- `07-testing/` — Test documentation and screenshots
-
 ### Testing Evidence
 - [Connectivity Tests](07-testing/connectivity-tests.md)
 - [SSH Verification](07-testing/ssh-verification.md)
 - [Telnet Rejection](07-testing/telnet-rejection.md)
 
-### Project Status
-| Milestone | Status |
-|-----------|--------|
-| Milestone 1 — Design & IP Plan | ✅ Complete |
-| Milestone 2 — Implementation & SSH | ✅ Complete |
-| Final Submission — Video & Report | ⏳ In progress |
-01-client-requirements/   Requirements analysis, traced to design decisions
-02-network-design/        Physical and logical topology diagrams
-03-ip-addressing/         VLSM addressing plan (per-VLAN subnets, gateways)
-04-packet-tracer/         Packet Tracer project files (physical + logical build)
-```
+### Milestone 2 Additions
+- `06-configuration/` — Running configurations for all 7 devices
+- `07-testing/` — Test documentation and screenshots
 
-More folders (configuration, testing, reflection) will be added as the
-project progresses through Milestone 2.
-
-## Project Status
-
-- [x] Milestone 1 (28 Aug 2026) — Client requirements, IP addressing plan, initial Packet Tracer build
-- [ ] Milestone 1 — Topology diagrams (completed)
-- [ ] Milestone 2 (2 Oct 2026) — Full Packet Tracer build, SSH configuration, testing evidence (in progress)
-- [ ] Final submission (16 Oct 2026) — Full portfolio, technical report, video demonstration
+---
 
 ## Academic Integrity
 
