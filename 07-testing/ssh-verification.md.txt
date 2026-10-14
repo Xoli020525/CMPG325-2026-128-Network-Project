@@ -31,3 +31,32 @@ SSH (secure device management plane) — CMPG325-2026-128
 - PC-MANAGEMENT: 172.30.84.194
 
 ## Verification Command (on SW-CORE)
+Command: `show ip ssh`
+
+Result: SSH was enabled on SW-CORE using version 2.0, as verified in the final implementation checks.
+
+## Final SSH Verification — 14 October 2026
+
+Following corrections to the Packet Tracer configuration, SSH remote management was retested from PC-MANAGEMENT (172.30.84.194) using the updated working project file.
+
+The command `ssh -l admin <device-IP>` was used to connect to each device. After login, `show privilege` was used to verify administrator access.
+
+| Device | Management IP | SSH Login | Privilege Level |
+|---|---|---|---|
+| SW-CORE | 172.30.84.193 | Successful | 15 |
+| SW-ADMIN | 172.30.84.195 | Successful | 15 |
+| SW-EDIT | 172.30.84.196 | Successful | 15 |
+| SW-SALES | 172.30.84.197 | Successful | 15 |
+| SW-DESIGN | 172.30.84.198 | Successful | 15 |
+| SW-BOARD | 172.30.84.199 | Successful | 15 |
+| R1 | 172.30.84.209 | Successful | 15 |
+
+Telnet connection attempts were also rejected, confirming SSH-only remote access in the tested implementation.
+
+## Evidence
+
+Existing Milestone 2 screenshots are available under `07-testing/07-testing/screenshots/`, including SSH login, `show ip ssh`, and Telnet rejection evidence. Updated screenshots from the final working project should be added separately, so earlier evidence remains identifiable.
+
+## Conclusion
+
+The final verification checks confirmed successful SSH administrator access to all seven network devices. Secure remote management operates through the internal management network, with no internet connection required.
