@@ -19,6 +19,13 @@ is provisioned in advance for a VoIP handset rollout (CR11).
 | **Addressing block** | 172.30.84.0/23 |
 
 ## Repository Structure
+- `01-client-requirements/` — Client requirements
+- `02-Network-Design/` — Network topology diagrams
+- `03-ip-addressing/` — VLSM addressing plan
+- `04-packet-tracer/` — Packet Tracer files
+- `05-Documentation/` — Milestone reports
+- `06-configuration/` — Device configuration exports
+- `07-testing/` — Testing documents and screenshots
 
 ## Project Status
 
@@ -63,9 +70,9 @@ R1, SW-CORE, SW-ADMIN, SW-EDIT, SW-SALES, SW-DESIGN, SW-BOARD
 - Telnet connection to SW-CORE rejected (only SSH accepted)
 
 ### Testing Evidence
-- [Connectivity Tests](07-testing/connectivity-tests.md)
-- [SSH Verification](07-testing/ssh-verification.md)
-- [Telnet Rejection](07-testing/telnet-rejection.md)
+- [Connectivity Tests](07-testing/connectivity-tests.md.txt)
+- [SSH Verification](07-testing/ssh-verification.md.txt)
+- [Telnet Rejection](07-testing/telnet-rejection.md.txt)
 
 ### Milestone 2 Additions
 - `06-configuration/` — Running configurations for all 7 devices
